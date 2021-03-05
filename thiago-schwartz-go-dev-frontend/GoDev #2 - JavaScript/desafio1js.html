@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>D1</title>
+</head>
+
+<body>
+<div class="container fluid">
+
+    <label>Nome: </label>
+    <input class="form-control" id="nome" />
+    <label>Idade: </label>
+    <input class="form-control" id="idade" />
+    <label>Telefone: </label>
+    <input class="form-control" id="telefone" />
+    <button onclick="cadastrar()">Cadastrar</button>
+
+    <script>
+        const lista = [];
+
+        const cadastrar = () => {
+
+            const nomeInput = document.getElementById('nome').value;
+            const telefoneInput = document.getElementById('telefone').value;
+            const idadeInput = document.getElementById('idade').value;
+
+            const pessoa = {
+                nome: nomeInput,
+                telefone: telefoneInput,
+                idade: idadeInput
+            };
+
+            lista.push(pessoa);
+            console.log(lista);
+        }
+    </script>
+</div>
+</body>
+</html>

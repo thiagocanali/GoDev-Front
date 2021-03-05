@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="empresa.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Empresa.js</title>
+</head>
+
+<body class="container-fluid corFundo">
+    <h1 class="text-center">Cadastro de Empresas</h1>
+    <label>Nome:</label>
+    <input class="form-control" id="nome" placeholder="Digite o nome..." />
+    <label>CNPJ:</label>
+    <input class="form-control" id="cnpj" placeholder="Digite o cnpj..." />
+    <label>Telefone:</label>
+    <input class="form-control" id="telefone" placeholder="Digite o telefone..." />
+    <br>
+    <select id="status">
+        <option value="">Selecione...</option>
+        <option value="aberto">Aberto</option>
+        <option value="fechado">Fechado</option>
+    </select>
+    <br>
+    <br>
+    <button class="btn btn-primary" onclick="cadastrar()">Cadastrar</button>
+    <button class="btn btn-dark" onclick="limparCampos()">Limpar Campos</button>
+    <button class="btn btn-danger" onclick="limparLista()">Limpar Lista</button>
+    <script src="empresa.js"></script>
+
+    <table class="table mt-3">
+        <thead>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Descrição</th>
+            <th>Situação</th>
+        </thead>
+        <tbody id="lista">
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>

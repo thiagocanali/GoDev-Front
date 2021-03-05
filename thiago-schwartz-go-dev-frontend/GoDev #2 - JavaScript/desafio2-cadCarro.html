@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>D2</title>
+</head>
+
+<body>
+    <div class="container fluid">
+
+        <h1 style="text-align: center;">Cadastro de Veículo</h1>
+        <label>Marca: </label>
+        <input class="form-control" id="marca" placeholder="digite a marca..." />
+        <label>Modelo: </label>
+        <input class="form-control" id="modelo" placeholder="digite o modelo..." />
+        <label>Ano Fabricacao: </label>
+        <input class="form-control" id="anofabricacao" placeholder="digite o ano..." />
+        <button class="btn btn-primary" onclick="cadastrar()">Cadastrar veículo</button>
+        <button class="btn btn-danger" onclick="limparLista();">Limpar</button>
+        <script>
+            let lista = [];
+
+            const cadastrar = () => {
+
+                const marcaVeiculo = document.getElementById('marca').value;
+                const modeloVeiculo = document.getElementById('modelo').value;
+                const anoFabVeiculo = document.getElementById('anofabricacao').value;
+
+                const veiculo = {
+                    marca: marcaVeiculo,
+                    modelo: modeloVeiculo,
+                    anofabricacao: anoFabVeiculo
+                };
+                lista.push(veiculo);
+                console.log(lista);
+            }
+            const limparLista = () => {
+                lista = [];
+                console.log(lista);
+            }
+        </script>
+    </div>
+</body>
+
+</html>
